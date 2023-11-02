@@ -19,7 +19,7 @@ public class LecturaMain {
 			InputStream is = new FileInputStream(archivo);
 			long i = archivo.length();
 			int byteLeido;
-			                                                  // este try lo muestra letra a letra en lineas diferentes , los saltos de linea
+			                                         // este try lo muestra letra a letra en lineas diferentes , los saltos de linea
 			while (i != 0) {
 				byteLeido = is.read();
 				System.out.println((char) byteLeido);       //se pone (char) para convertirlo  en caracteres
@@ -38,7 +38,7 @@ public class LecturaMain {
 
 			File archivo = new File("archivo.txt");
 			InputStream is = new FileInputStream(archivo);
-			byte[] bytesLeidos = new byte [(int) archivo.length()];      //se pone (int) para convertirlo  en int para poder luego leerlo
+			byte[] bytesLeidos = new byte [(int) archivo.length()];  //se pone (int) para convertirlo  en int para poder luego leerlo
 			int byteLeido;
 			
 			is.read(bytesLeidos);                     // este try lo muestra tal cual como el documento de texto

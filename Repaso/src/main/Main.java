@@ -36,9 +36,6 @@ public class Main {
 		}
 		
 		
-		listStrings.add("vverbubib");
-		listStrings.add("15189111");
-		listStrings.add(1,"vverbubib");
 		
 
 	
