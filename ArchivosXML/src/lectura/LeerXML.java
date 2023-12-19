@@ -42,14 +42,18 @@ public class LeerXML {
 		//los nodos resultantes de la consulta
 		nodeList = (NodeList) xPath.compile(path).evaluate(document,XPathConstants.NODESET);		
 		
-		for(int i = 0; i<nodeList.getLength();i++) {
-			Element elemento = (Element) nodeList.item(i);
+		for (int i = 0;i< nodeList.getLength();i++) {
+			Element elemento  = (Element) nodeList.item(i);
 			
-			System.out.println(elemento.getElementsByTagName("nombre").item(0).getTextContent());
-			System.out.println(elemento.getElementsByTagName("apellido").item(0).getTextContent());
-			System.out.println(elemento.getElementsByTagName("apellido").item(1).getTextContent());
-			System.out.println("\n");
-	
+			System.out.println("ID: "+elemento.getElementsByTagName("id").item(0).getTextContent());
+			System.out.println("Nombre: "+elemento.getElementsByTagName("Nombre").item(0).getTextContent());
+			System.out.println("Especie:"+elemento.getElementsByTagName("Especie").item(0).getTextContent());
+			System.out.println("Sexo: "+elemento.getElementsByTagName("Sexo").item(0).getTextContent());
+			System.out.println("Edad: "+elemento.getElementsByTagName("Edad").item(0).getTextContent());
+			System.out.println("Img: "+elemento.getElementsByTagName("img").item(0).getTextContent());
+
+
+			
 		}
 		
 		}catch(Exception e){
