@@ -13,8 +13,9 @@ public class Main {
 		// TODO Auto-generated method stub
 		
 		try (Connection con = Conexion.open()){
-			printSQL(con,"SELECT  m.alias, SUM(mp.unidades) AS 'TOTAL' from magos m\r\n"
-					+ "  join magos_pocimas mp on m.id = mp.idMago group  by id "
+			printSQL(con,"SELECT  m.alias, SUM(mp.unidades) AS 'suma unidades'"
+					+ " from magos m  inner join magos_pocimas mp on m.id = mp.idMago "
+					+ "group  by id "
 					+ ""
 			);
 		}catch(SQLException ex) {
@@ -33,17 +34,12 @@ public class Main {
 				while(rs.next()) {
 					//int id = rs.getInt("id");
 					String alias = rs.getString("alias");
-					//String nombre = rs.getString("nombre");
-					//String telefono = rs.getString("telefono");
-					int total = rs.getInt("TOTAL");
-					
-					
+					int sum = rs.getInt("suma unidades");
 					
 					
 			System.out.println(
-				
 					 "ALIAS: " +alias
-					+ ",TOTAL: " + total
+					+ ",TOTAL: " + sum
 					
 					);		
 
